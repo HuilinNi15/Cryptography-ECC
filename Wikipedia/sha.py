@@ -57,7 +57,8 @@ f2 = F_bytes[38:70]
 print("f1 (first 32 bytes):", f1.hex())
 print("f2 (last 32 bytes):", f2.hex())
 
+# Para sacar f1 inverso: int(pow(f1, -1, n) % n)
+
 
 print("\n\n- - - - - - - - - - - - - - - - - - - Comprobación de la firma - - - - - - - - - - - - - - - - - - -\n") 
 
-w1 = 
