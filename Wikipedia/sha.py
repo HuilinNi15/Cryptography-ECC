@@ -4,8 +4,11 @@ from ecpy.curves import Curve, Point
 from ecpy.keys import ECPublicKey, ECPrivateKey
 from ecpy.ecdsa import ECDSA
 
+print("\n\n- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \n")
+print("- - - - - - - - - - - - - - - - - - - - - - - - - - APARTADO 1 - - - - - - - - - - - - - - - - - - - - - - - - - -")
+print("\n- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \n")
 
-print("\n\n- - - - - - - - - - - - - - - - - - - Sha256(mensaje.bin) - - - - - - - - - - - - - - - - - - - \n")
+print("\n- - - - - - - - - - - - - - - - - - - Sha256(mensaje.bin) - - - - - - - - - - - - - - - - - - - \n")
 
 file_path = "./Wikipedia/mensaje.bin"
 
@@ -126,5 +129,17 @@ is_valid = signer.verify(
 
 print(f"APARTADO 1.d: La firma es válida: {is_valid}")
 
+print("\n\n- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \n")
+print("- - - - - - - - - - - - - - - - - - - - - - - - - - APARTADO 2 - - - - - - - - - - - - - - - - - - - - - - - - - -")
+print("\n- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \n")
 
-print("\n\n- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \n")
+hex_modulus = "E5E03B19B9D56FB72B7263A095FBCDD5008EEAB3877162DD396F83EB3CFCA94A7654D43A6475EFDE5F475EBAEB1915C6CF91BED263AAFA170A2D1E27E6D9014CA4F3F906B6474723253A6A0DD2EAD2F09D56D399D4BCB4F30C9E14F2603172EC0AC3B932F24198A5AAF05B41198EFF17A76F813B7F9DF0952DCB114F231707AC4F39D29646887A6A686206ED31D5561CF78B2B3A43912EE39FBD3DBD02E8CA3B358AB30EB03A33DB14DFC8376D29623BCB4F2AEF23976BBC30846E74894FCF04E8ED34A9209B787CE00D912B30BFF174AEB1BFB94BFE14567C98E3C6F173E3645162870A2A65F9228069F985870579BBFA714B42327CE946CF3E319727594C4DC0AC1B658D5A8501D7975205976E19795A6194553007C516F018ACB6B177249B92FF4A0AA49717BEE0C5FAB32C1ACB9CD24E024FBECAA3951BF357DDA5736AF53E3FAAAFDEAA3B92A3E42B9A9A2CC4A59C61D89BD98C910DF57A2809B104F7AFB9EECCA705948CEA0D7539E90033F67E06A7DB62E85185041DCDA8D2063F839B"
+decimal_modulus = int(hex_modulus, 16)
+
+bin_pubExp = "010001"
+decimal_pubExp = int(bin_pubExp, 2)
+
+print(f"APARTADO 2.a: El módulo del certificado del servidor de la FIB en base 10 es:\n\n{decimal_modulus}\n \
+\ny el exponente público: {decimal_pubExp}")
+
+print("\n- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \n")
